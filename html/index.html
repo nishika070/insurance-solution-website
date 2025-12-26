@@ -29,9 +29,20 @@
         <!--Home section-->
         <section class="home" id ="home">
             <div class ="leftsection">
-                Insurance for every ride 
-                <div>you take...
+                <p class="home-badge">Trusted General Insurance Experts</p>
+                <!-- main heading -->
+                <h1 class="hero-title">
+                Insurance Solutions designed for every life<br>
                     <span id="element"></span>
+                </h1>
+                <p class="subtext">
+                From everyday vehicle coverage to comprehensive general insurance,
+                    we help individuals and businesses stay protected with confidence.
+                </p>
+                <!--CTA-->
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-primary">Get an Insurance Quote</a>
+                    <a href="#service" class="btn-secondary">Explore Our Services</a>
                 </div>
             </div>
             <div class ="rightsection">
@@ -115,9 +126,14 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
     var typed = new Typed('#element', {
-      strings: ['Car', 'Bike', 'Taxi', 'Trucks'],
-      typeSpeed: 100,
-    });
+    strings: ['Cars', 'Bikes', 'Life', 'Commercial'],
+    typeSpeed: 70,
+    backSpeed: 40,
+    backDelay: 1500,
+    loop: true,
+    showCursor: false
+});
+
     </script>
     <!--button submitted script-->
     <script>
