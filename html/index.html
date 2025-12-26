@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Solutions</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+    <!--header/navbar-->
+    <header id ="top">
+        <nav>
+            <div class ="left">INSURANCE SOLUTION </div>
+
+            <div class ="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/">CRM</a></li>
+                </ul>
+            </div>
+        </nav>  
+    </header>
+    <!--Main-->
+    <main>
+        <!--Home section-->
+        <section class="home" id ="home">
+            <div class ="leftsection">
+                Insurance for every ride 
+                <div>you take...
+                    <span id="element"></span>
+                </div>
+            </div>
+            <div class ="rightsection">
+                <img src="../images/ins-removebg-preview.png" alt="">
+            </div>
+
+        </section>
+        <!--services-->
+        <section class="service" id ="service">
+            <div>Motor Insurance</div>
+        </section>
+
+        <!--about us -->
+         <section class="about" id ="about">
+            <div>Motor Insurance</div>
+        </section>
+        <!--contact-->
+         <section class="contact" id ="contact">
+            <div class="contact-left">
+                <h2>Contact Us</h2>
+                <p>Get in Touch with us for any Insurance query </p>
+            </div>
+            <div class="contact-right">
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="your name" required>
+                <input type="email" name="email" placeholder="your email" required>
+                <input type="tel" name="phone" placeholder="your phone number" required>
+                <select name="insurance">
+                    <option value="">Select Insurance type</option>
+                    <option value="car">Car Insurance</option>
+                    <option value="bike">Bike Insurance</option>
+                    <option value="commercial">Commerciak Vehicle</option>
+                    <option value="health">Health Insurance</option>
+
+                </select>
+                <textarea name="message" placeholder="your message"></textarea>
+                <button type="submit">Submit</button>
+                <p class="success-message"> Submitted successfully! We’ll contact you soon.</p>
+            </form>
+            </div>
+        </section>
+        <!--Footer section-->
+        <footer id="footer" class="footer">
+            <div class="footer-container">
+            <div class="footer-box">
+                <h3>Insurance solution</h3>
+                <p>
+                     Trusted insurance services with a focus on <br>motor insurance,
+                     customer satisfaction, and long-term security.
+                </p>
+            </div>
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+                <p>📍B 11 Office No 4 & 6 Upper Ground Floor, RDC,<br> Raj Nagar, Ghaziabad, Uttar Pradesh 201002</p>
+                <p>📞 +91 9119044044</p>
+                <p>✉️ dharmender.kumar002@gmail.com</p>
+            </div>
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                    <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/">CRM</a></li>
+                </ul>
+                
+                
+            </div>
+            </div>
+                <!-- Bottom line -->
+            <div class="footer-bottom">
+             <p>© 2025 Insurance Solutions. All rights reserved.</p>
+            </div>
+        </footer>
+
+
+        
+    </main>
+    <!--script js-->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+    var typed = new Typed('#element', {
+      strings: ['Car', 'Bike', 'Taxi', 'Trucks'],
+      typeSpeed: 100,
+    });
+    </script>
+    <!--button submitted script-->
+    <script>
+    const form = document.querySelector(".contact-form");
+    const successMessage = document.querySelector(".success-message");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // stop page reload
+
+             // hide form
+        successMessage.style.display = "block"; // show message
+        form.reset();
+    });
+    // save scroll position
+    window.addEventListener("scroll", () => {
+        localStorage.setItem("scrollY", window.scrollY);
+    });
+
+    // restore scroll position
+    window.addEventListener("load", () => {
+        const scrollY = localStorage.getItem("scrollY");
+        if (scrollY) {
+            window.scrollTo(0, scrollY);
+        }
+    });
+
+</script>
+
+
+</body>
+</html>
