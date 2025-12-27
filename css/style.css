@@ -63,17 +63,89 @@ nav ul li a:hover {
     font-weight: 600;
     color: #FFFFFF;
 }
+/* ===== HORIZONTAL INSURANCE CARD SLIDER ===== */
 
-.right {
-    font-size: 1.2rem;
+.rightsection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* slider container */
+.card-slider{
+    position: relative;
+    width: 420px;
+    height: 260px;
+    overflow: hidden;
+}
+
+/* common card */
+.insurance-card{
+    position: absolute;
+    inset: 0;
+    background: #FFFFFF;
+    border-radius: 24px;
+    box-shadow: 0 30px 60px rgba(30,58,138,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideCards 12s infinite;
+}
+
+/* images inside card */
+.insurance-card img{
+    width: 90px;
+    height: auto;
+}
+
+/* text */
+.insurance-card span{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1E3A8A;
+}
+
+/* timing sync (VERY IMPORTANT) */
+.car{ animation-delay: 0s; }
+.bike{ animation-delay: 3s; }
+.health{ animation-delay: 6s; }
+.commercial{ animation-delay: 9s; }
+
+/* horizontal slide animation */
+@keyframes slideCards{
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    10%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    30%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    40%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
 
 /*======Home section======*/
 /* ========== HOME / HERO SECTION ========== */
 
 .home{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 60px;
     min-height: calc(100vh - 100px);
@@ -157,25 +229,8 @@ nav ul li a:hover {
     font-weight: 500;
 }
 
-/* RIGHT IMAGE */
-.rightsection img{
-    width: 90%;
-    max-width: 500px;
-    transform: scale(1.05);
-}
 
-/*common for now*/
-.service,.about{
-    padding:100px 60px;
-    min-height: 100vh;
-    background-color: #FFFFFF;
-}
 
-/*temp heading lock */
-.service div,.about div{
-    font-size: 2.5 rem;
-    color: #1E3A8A;
-}
 
 /* contact section*/
 .contact{
@@ -295,4 +350,207 @@ footer{
     margin-top: 30px;
     font-size: 13px;
     color: #6B7280;
+}
+
+
+/* =====================Services Css====================*/
+
+.service {
+    padding: 100px 80px;
+    background-color: #F1F5FF;
+}
+
+.heading h3{
+
+    color: #111827;
+    font-weight: 600;
+    font-size: 2.4rem;
+    margin-bottom:12px;
+    margin-top: 60px;
+
+
+}
+.service-subtext {
+    font-size: 1.2rem;
+    color: #6B7280;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+.service-container {
+    display: flex;
+    gap:30px;
+    align-items: stretch;
+    
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+
+}
+
+
+.card h4 {
+    font-size: 1.4rem;
+    color: #1E3A8A;
+    margin-bottom: 14px;
+
+}
+.card p {
+    font-size: 1 rem;
+    line-height: 1.6;
+    color: #374151;
+    margin-bottom: 14px;
+
+}
+.card ul{
+    padding-left: 18px;
+    margin-top: 10px;
+
+}
+.card ul li{
+    font-size: 0.95rem;
+    color: #374151;
+    margin-bottom: 8px;
+
+}
+.subheading {
+    color:#1E3A8A;
+    font-weight: 300;
+    font-size: 0.91rem;
+    background-color: #ebf0f8;
+    border-radius: 20px;
+    padding: 4px;
+    margin-top: auto;
+
+    display: inline-block;
+    
+}
+/*==========about sections===============*/
+.about{
+    padding:100px 80px;
+    min-height: 100vh;
+    background-color: #FFFFFF;
+}
+.about-container
+{
+    margin: 0 20px 50px;
+    max-width: 2000px;
+
+}
+.about-intro h2{
+    margin-top: 40px;
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #1E3A8A;
+
+}
+.about-intro p{
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #374151;
+    max-width: 1200px;
+}
+.about-rail{
+    background-color: #F1F5FF;
+    padding: 20px 0;
+    border-radius: 20px;
+    
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+
+
+}
+.about-rail h3{
+    font-size: 1.55rem;
+    color: #1E3A8A;
+    margin-bottom: 12px;
+    max-width: 1100px;
+    margin-left: 20px;
+    margin-right: auto;
+
+
+}
+.about-rail p{
+    font-size: 1.25rem;
+    color: #6B7280;
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+
+
+
+}
+.rail-wrapper{
+    overflow: hidden;
+    max-width: 1400px;
+    margin: 40px auto;
+}
+
+.rail-track{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transition: transform 0.6s ease-in-out;
+    will-change: transform;
+}
+.rail-track img{
+    background-color: #FFFFFF;
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid #57595e;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    width: 220px;
+    height: 140px;
+    opacity: 0.8;
+    object-fit: contain;
+    transition: 
+        transform 0.6s ease,
+        opacity 0.6s ease;
+}
+
+
+.rail-track img.active{
+    opacity: 1;
+    transform: scale(1.5);
+    box-shadow: 0 20px 40px rgba(30,58,138,0.25);
+}
+
+
+
+.rail-track img:hover{
+    transform: scale(1.05);
+}
+
+.about-founder {
+    padding: 50px 0 0;
+
+}
+.founder-container {
+    max-width: 1500px;
+    margin: 0 auto;
+
+}
+.founder-container h2{
+    font-size: 2.4rem;
+    color: #1E3A8A;
+    margin-bottom: 6px;
+}
+
+.founder-container span{
+    font-size: 1rem;
+    color: #6B7280;
+    display: block;
+    margin-bottom: 20px;
+}
+.founder-container p{
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #374151;
+    margin-bottom: 14px;
 }
