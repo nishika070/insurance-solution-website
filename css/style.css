@@ -438,23 +438,25 @@ footer{
 }
 .about-container
 {
-    margin: 0 20px 50px;
+    margin: 0 20px 40px;
     max-width: 2000px;
 
 }
 .about-intro h2{
-    margin-top: 40px;
-    font-size: 2.6rem;
+    margin-top: 20px;
+    font-size: 2.5rem;
     font-weight: 600;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     color: #1E3A8A;
 
 }
 .about-intro p{
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.7;
     color: #374151;
-    max-width: 1200px;
+    max-width: 1400px;
+    font-weight: 200;
+
 }
 .about-rail{
     background-color: #F1F5FF;
@@ -466,7 +468,7 @@ footer{
 
 }
 .about-rail h3{
-    font-size: 1.55rem;
+    font-size: 1.8rem;
     color: #1E3A8A;
     margin-bottom: 12px;
     max-width: 1100px;
@@ -479,7 +481,7 @@ footer{
     font-size: 1.25rem;
     color: #6B7280;
     max-width: 1400px;
-    margin: 0 auto 40px;
+    margin: 0 30px 40px;
     line-height: 1.6;
 
 
@@ -495,18 +497,18 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 50px;
     transition: transform 0.6s ease-in-out;
     will-change: transform;
 }
 .rail-track img{
     background-color: #FFFFFF;
-    padding: 18px;
+    padding: 10px;
     border-radius: 10px;
     border: 1px solid #57595e;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-    width: 220px;
-    height: 140px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    width: 400px;
+    height: 200px;
     opacity: 0.8;
     object-fit: contain;
     transition: 
@@ -517,7 +519,7 @@ footer{
 
 .rail-track img.active{
     opacity: 1;
-    transform: scale(1.5);
+    transform: scale(1.25);
     box-shadow: 0 20px 40px rgba(30,58,138,0.25);
 }
 
@@ -526,31 +528,91 @@ footer{
 .rail-track img:hover{
     transform: scale(1.05);
 }
-
-.about-founder {
-    padding: 50px 0 0;
-
+/*founder in about us page */
+.meet-founder{
+    margin-top: 50px;
+    padding: 50px;
+    text-align: center;
+    background: #F9FAFB;
+    border-radius: 24px;
 }
-.founder-container {
-    max-width: 1500px;
-    margin: 0 auto;
 
-}
-.founder-container h2{
-    font-size: 2.4rem;
+.meet-founder h3{
+    font-size: 2rem;
     color: #1E3A8A;
+    margin-bottom: 12px;
+
+
+
+}
+
+.meet-founder p{
+    font-size: 1.1rem;
+    color: #6B7280;
+    margin-bottom: 24px;
+}
+
+.founder-btn{
+    display: inline-block;
+    padding: 14px 36px;
+    background: #1E3A8A;
+    color: #ffffff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+/*page about founder*/
+.founder{
+    padding: 140px 80px;
+    background: #ffffff;
+}
+
+.founder-wrapper{
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* LEFT IMAGE */
+.founder-image img{
+    width: 360px;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+/* RIGHT CARD */
+.founder-card{
+    background: #F9FAFB;
+    padding: 60px;
+    border-radius: 28px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+}
+
+.founder-card blockquote{
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #1E3A8A;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.founder-card h2{
+    font-size: 2rem;
+    color: #111827;
     margin-bottom: 6px;
 }
 
-.founder-container span{
-    font-size: 1rem;
-    color: #6B7280;
+.founder-card span{
     display: block;
+    color: #6B7280;
     margin-bottom: 20px;
 }
-.founder-container p{
-    font-size: 1.05rem;
+
+.founder-card p{
+    font-size: 1.1rem;
     line-height: 1.7;
     color: #374151;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
 }

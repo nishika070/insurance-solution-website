@@ -19,7 +19,7 @@
                     <li><a href="#service">Services</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="/">CRM</a></li>
+                    <li><a href="http://localhost:4000/layout.html">CRM</a></li>
                 </ul>
             </div>
         </nav>  
@@ -81,7 +81,7 @@
            </div>
            <div class="service-subtext">
             We offer a wide range of general insurance solutions covering motor, life, health, and commercial needs.
-            <br> Our goal is to help individuals, families, and businesses stay financially protected with reliable coverage and expert guidance.
+            <br>Our goal is to help individuals, families, and businesses stay financially protected with reliable coverage and expert guidance.
            </div>
            <div class="service-container">
             <div class="card">
@@ -183,14 +183,11 @@
                     <!--content -->
                     <p>
                         Insurance Solutions is a trusted general insurance
-                        advisory firm with over 15 years of experience in
-                        the insurance industry. We provide reliable insurance
+                        advisory firm with over <strong>15+ years of experience in
+                        the insurance industry</strong>. We provide reliable insurance
                         solutions across motor, life, health, and commercial 
                         segments, helping individuals and businesses make informed 
                         decisions.
-
-                    </p>
-                    <p>
                         Our approach is centered on understanding client needs and 
                         offering suitable coverage options that ensure long-term financial 
                         protection. With in-depth industry knowledge and a client-first mindset,
@@ -214,36 +211,80 @@
                 <div class="rail-wrapper">
                     <div class="rail-track">
                         <!--images-->
-                        <img src="../images/bg.jpg" alt="Award 1">
-                        <img src="../images/car.jpg" alt="Award 2">
-                        <img src="../images/commercial.jpg" alt="Award 3">
-                        <img src="../images//health.jpg" alt="Award 4">
-                        <img src="../images/ins-removebg-preview.png" alt="Award5">
-                        <img src="../images/ins.jpeg" alt="Award 6">
-                        <img src="../images/images.jpg" alt="Award7">
+                        <img src="../images/award.jpeg" alt="Award 1">
+                        <img src="../images/award2.jpeg" alt="Award 2">
+                        <img src="../images/award3.jpeg" alt="Award 3">
+                        <img src="../images/award4.jpeg" alt="Award 4">
+                        <img src="../images/award5.jpeg" alt="Award5">
+                        <img src="../images/award 6.jpeg" alt="Award 6">
+                        <img src="../images/award8.jpeg" alt="Award7">
+                        <img src="../images/award 9.jpeg" alt="Award7">
+                        <img src="../images/award 10.jpeg" alt="Award7">
+                        <img src="../images/ins-office.jpeg" alt="office">
+                        <img src="../images/award.jpeg" alt="Award7">
+                        <img src="../images/award2.jpeg" alt="Award 2">
+                        <img src="../images/award3.jpeg" alt="Award 3">
+                        <img src="../images/award4.jpeg" alt="Award 4">
+                        <img src="../images/award5.jpeg" alt="Award5">
+                        <img src="../images/award 6.jpeg" alt="Award 6">
+                        <img src="../images/award8.jpeg" alt="Award7">
+                        <img src="../images/award 9.jpeg" alt="Award7">
+                        <img src="../images/award 10.jpeg" alt="Award7">
                     </div>
                 </div>
             </div>
-            <!---founder section-->
-            <div class="about-founder">
-                <div class="founder-container">
-                    <h2>Mr. dharmender Kumar</h2>
-                    <span>(Head – Insurance Solutions)</span>
-                    <p>
-                        Mr. Dharmender Kumar is an experienced 
-                        insurance professional with deep expertise
-                        in the general insurance sector. Over the years, 
-                        he has advised individuals, families, and businesses
-                        on choosing insurance solutions that align with their 
-                        specific needs and goals.
-                        He maintains a strong network of insurance agents and industry
-                         partners, enabling access to reliable policies and efficient service 
-                         support. His practical understanding of insurance products and market
-                          dynamics helps clients secure coverage with clarity and confidence.
-                    </p>
-                    
-                </div>
+            <!--====about the founder=====-->
+            <div class="meet-founder">
+            <h3>Meet Our Founder</h3>
+                <p>
+                 Learn more about the vision, values, and leadership behind
+                Insurance Solutions.
+                </p>
+             <a href="#founder" class="founder-btn">Discover the Story</a>
             </div>
+
+            <!---founder section-->
+            <section class="founder" id="founder">
+
+    <div class="founder-wrapper">
+
+        <!-- LEFT: PHOTO -->
+        <div class="founder-image">
+            <img src="../images/founder.jpeg" alt="Mr. Dharmender Kumar">
+        </div>
+
+        <!-- RIGHT: CARD -->
+        <div class="founder-card">
+
+            <blockquote>
+                “Insurance is not about selling policies,
+                it’s about protecting lives, livelihoods,
+                and long-term peace of mind.”
+            </blockquote>
+
+            <h2>Mr. Dharmender Kumar</h2>
+            <span>Founder & Head – Insurance Solutions</span>
+
+            <p>
+                Mr. Dharmender Kumar is a seasoned insurance professional with
+                over 15 years of experience in the general insurance industry.
+                His approach is rooted in understanding client needs and
+                recommending solutions that truly protect their future.
+            </p>
+
+            <p>
+                He believes in transparency, long-term relationships, and
+                ethical advisory over short-term gains. His strong industry
+                network and practical expertise enable clients to make
+                confident and informed insurance decisions.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
         </section>
         <!--contact-->
          <section class="contact" id ="contact">
@@ -349,9 +390,9 @@
 </script><script>
 const track = document.querySelector('.rail-track');
 let images = Array.from(track.children);
-const GAP = 40;
+const GAP = 50;
 
-let centerIndex = Math.floor(images.length / 2);
+let centerIndex = Math.floor(images.length/ 2);
 
 function setActive() {
     images.forEach(img => img.classList.remove('active'));
